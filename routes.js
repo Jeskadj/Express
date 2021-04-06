@@ -1,4 +1,5 @@
 const express = require('express');
+const users=require('./users')
 const router = express.Router();
 router.get('/',function(request,response){
     response.status(200),send("hello home")
@@ -31,8 +32,8 @@ router.post("/login", function (request,response){
     response.send("login")
 })
 
-router.get('/api/vi/allusers', function(request,respond){
-    //     response.status(200).send("allusers")
+router.get('/allusers', function(request,response){
+        response.status(200).send("allusers")
     })
 
 module.exports = router
